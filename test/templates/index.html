@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тренажёры и симуляторы для миссии на Марс</title>
+</head>
+<body>
+    <h1>Тренажёры и симуляторы для миссии на Марс</h1>
+
+    {% block content %}
+        {% if prof in ['инженер', 'строитель'] %}
+            <h2>Инженерные тренажёры</h2>
+            <img src="{{ url_for('static', filename='space-racer-engineers.png') }}" alt="Инженерные тренажёры">
+        {% else %}
+            <h2>Научные симуляторы</h2>
+            <img src="{{ url_for('static', filename='space-racer-scientists.png') }}" alt="Научные симуляторы">
+        {% endif %}
+    {% endblock %}
+</body>
+</html>
+
+
+
